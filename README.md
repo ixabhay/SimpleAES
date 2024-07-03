@@ -2,6 +2,7 @@
 
 To decrpyt an encrypted data:
 ```csharp
+string key = "something";
 string decryptedBalance = "99";
         try{
             decryptedBalance = AES256.Decrypt(savedDataSO.GetValue("Balance"), key);
@@ -13,6 +14,7 @@ string decryptedBalance = "99";
 
 To encrypt a data:
 ```csharp
+string key = "something";
 string encryptedBalance = AES256.Encrypt(currentBalance.ToString(), key);
         Debug.Log("Encrypted balance: " + encryptedBalance);
 ```
